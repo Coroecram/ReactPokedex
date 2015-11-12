@@ -6,7 +6,7 @@ var ApiUtil = window.ApiUtil = {
       type: 'GET',
       dataType: 'json',
       success: function (data) {
-        ApiActions.receiveAllPokemons(data);
+        ApiActions.receiveSinglePokemon(data);
       }
     });
   },

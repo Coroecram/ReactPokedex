@@ -1,7 +1,7 @@
 (function () {
   var Router = ReactRouter.Router;
   var Route = ReactRouter.Route;
-  
+
   $(document).ready(function () {
     React.render(
       <Router>
@@ -11,3 +11,4 @@
       </Router> ,document.getElementById('pokedex'));
   });
 })();
+// <Route path="pokemon/:pokemonId/toys/:toyId" components={{pokemonDetail: PokemonDetail, toyDetail: ToyDetail}}/>
