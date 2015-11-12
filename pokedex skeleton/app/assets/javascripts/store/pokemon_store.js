@@ -23,6 +23,14 @@
     this.emit(CHANGE_EVENT);
   };
 
+  PokemonStore.find = function(id) {
+    for (var i = 0; i < _pokemons.length; i++){
+      if (_pokemons[i].id === id){
+        return _pokemons[i];
+      }
+    }
+  };
+
   PokemonStore.dispatchToken = AppDispatcher.register(function (payload) {
     switch(payload.actionType) {
       case PokemonConstants.POKEMONS_RECEIVED:

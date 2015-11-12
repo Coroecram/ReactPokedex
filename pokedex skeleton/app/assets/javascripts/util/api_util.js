@@ -1,5 +1,16 @@
 var ApiUtil = window.ApiUtil = {
 
+  fetchPokemon: function(id) {
+    $.ajax({
+      url: '/api/pokemon/' + id,
+      type: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        ApiActions.receiveAllPokemons(data);
+      }
+    });
+  },
+
   fetch: function() {
     $.ajax({
       url: '/api/pokemon',
@@ -10,5 +21,5 @@ var ApiUtil = window.ApiUtil = {
       }
     });
   }
-  
+
 };
